@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Basics of the Web</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-image"><img src="8sided_pinwheel_final.jpg" alt="pinwheel" width="150"></div>
+            <div class="title">A Bit About HTML and CSS</div>
+        </header>
+        <main class="site-content">
+            <div class="banner-title">Lesson 1: Basics of the Web</div>
+            
+            <div class="content-wrap">   
+                <p>The World Wide Web is a collection of HTML documents that was invented in the 1990s and now encompasses around 30 billion pages from around the world.</p>
+        
+                <p>All sorts of files can be found on the web, such as text, images, videos and music.</p>
+        
+                <h3>You and the server</h3>
+                <p>
+                A computer requests data from a remote server using HTTP, the main protocol of the web. A web browser then interprets and displays the data on a screen for the user <em>           (that's you!)</em> to see.
+            </p>
+        
+                <h3>HTML</h3>
+                <p>
+                HTML stands for Hypertext Markup Language and is the heart of the web. HTML documents                   form the majority of the content on the web, including text, images, videos and music.                 HTML documents contain text content which describes "what you see" and markup which                     describes "how it looks".
+            </p>
+        
+                <h3>Tags and Elements</h3>
+                <p>HTML documents are made of elements, which include a set of tags and content within those tags. HTML elements can be either inline or block.</p>
+                <pre>&lt;tag_name&gt; contents &lt;/tag_name&gt;</pre>
+                <p>One thing to remember is that computers are stupid. They only understand what a programmer explicitly tells them to do. For example, if there is no closing tag on an element, the last command will continue to be valid until the computer sees a corresponding closing tag.</p>
+                <p>An HTML tag can have multiple attributes, or additional descriptors.</p>
+                <pre>&lt;tag_name attr="value"&gt; contents &lt;/tag_name&gt;</pre>
+                <p>The <span class="inlinecode">&lt;a&gt;</span> tag, or anchor tag, has an attribute of 'href' followed by a value of the attribute, which in this case, is the URL of a link.</p>
+                <pre>&lt;a href="URL"&gt; contents &lt;/a&gt;</pre>
+                <p>Similarly, the <span class="inlinecode">&lt;img&gt;</span> tag has an attribute of 'src', with the value being the name of the image file. In addition to the image source, it's often recommended to also include an 'alt' attribute with the value being alternative text that is displayed when the image won't load. Note that the <span class="inlinecode">&lt;img&gt;</span> tag does not contain any content, and so has no closing tag. The <span class="inlinecode">&lt;img&gt;</span> tag is considered a "void tag".</p>
+                <pre>&lt;img src="image.jpg" alt="alternate text"&gt;</pre>
+                <p>Another void tag is the <span class="inlinecode">&lt;br&gt;</span> tag; it is merely a line break, without any content associated with it. It's used to separate lines of text, since in HTML, all whitespace is rendered as a single space.</p>
+                <p>Block elements form an "invisible box" around the content inside of them. Examples include:
+                <ul>
+                    <li><span class="inlinecode">&lt;p&gt;</span> : paragraph</li>
+                    <li><span class="inlinecode">&lt;div&gt;</span> : section division</li>
+                </ul>
+        
+                Inline tags include:
+                <ul>
+                    <li><span class="inlinecode">&lt;br&gt;</span> : break, or new line</li>
+                    <li><span class="inlinecode">&lt;em&gt;</span> : italics</li>
+                    <li><span class="inlinecode">&lt;b&gt;</span> : bold</li>
+                    <li><span class="inlinecode">&lt;img&gt;</span> : image</li>
+                    <li><span class="inlinecode">&lt;span&gt;</span> : often used to add styling</li>                       <li>and others.</li>
+                </ul>
+            </div>
+       
+            <div class="banner-title">Lesson 2: Creating a Structured Document with HTML</div>
+            <div class="content-wrap">
+            
+                <p>If a website is seen as a structure, or say, a house, then:</p>
+                <ul>
+                    <li><b>HTML</b> is the structure: the walls, the room divisions, where each room is located.</li>
+                    <li><b>CSS</b> is the style: wall color, curtains, decorations, carpeting.</li>
+                    <li><b>Javascript</b> is the interactive component: the TV, the garage door opener.</li>                   </ul>
+                <p>HTML and CSS are both languages, with their own specific rules and syntax, just as the English language has grammatical rules. A <a href="http://en.wikipedia.org/wiki/Document_Object_Model">DOM</a> <em>[Document Object Model]</em> is a convention for representing and interacting with HTML elements.</p>
+                <p>Because each element in a page is rectangular, a design can be broken down into a series of nesting boxes. Each box can be identified by a <span class="inlinecode">&lt;div&gt;</span> tag, and content can be added within the opening and closing tags. The nesting of the boxes creates the tree-like structure of HTML, called the DOM tree. A nested element is indented from the parent element above. The more indented the element, the more nested the box.</p>
+                <p>CSS, which stands for Cascading Style Sheets, determine the look of the website, including position, color, font, and margins.  Each box, or each <span class="inlinecode">&lt;div&gt;</span> element, can be styled using individual class attributes, sort of like tags on boxes, to help you remember what those boxes are for. Just as you would label a physical box with a meaningful name, class attributes should also have meaningful names.
+
+ </p>
+            </div>
+     
+            <div class="banner-title">Lesson 3: Adding Style to Structure with CSS</div>
+            <div class="content-wrap">
+    
+                <h3>Don't Repeat Yourself</h3>
+        
+                <p>When writing CSS, you may realize that you want several of the same type of elements to have the same look. You can give each element their own individual styling, and repeat the same style for each element, possibly with minor adjustments. If you ever want to make a change to all elements, you would have to go through and individually change each style. Having many repetitions like this in your code can often lead to user error and typographical mistakes.</p>
+                <p>By establish unique class attributes for each type of element, you would only need to change the style for that class, and those changes will be reflected in all the elements that use the specified class. This can save both time and trouble.</p>
+                <h3>CSS</h3>
+                <p>As mentioned before, CSS stands for Cascading Style Sheets. The "style sheets" part is easy to understand; it's the "cascading" part that can cause some confusion.</p>
+                <p>When styles are cascaded, the most specific rule is applied to every element. The program will continue traveling down the cascade of elements and rules until it come to one that best describes the element; that becomes the rule that is applied to the element.</p>
+                <p>A selector is what determines the element a rule is applied to. For instance, to apply a style to a class, use
+                <pre>.classname {attribute: value;}</pre>
+                <p>There are 3 different ways to apply CSS to a webpage:</p>
+                <ol>
+                    <li>Add <span class="inlinecode">&lt;style&gt;</span> elements to the <span class="inlinecode">&lt;head&gt;</span> section of the website.</li>
+                    <li>Link a separate .css file to the html file with a <span class="inlinecode">&lt;link&gt;</span> element in the <span class="inlinecode">&lt;head&gt;</span> element of your website.<pre>&lt;link rel="stylesheet" href="main.css"&gt;</pre></li>
+                    <li>Write the styling inline into the HTML. This can be useful in certain cases, but should be used carefully to avoid unnecessary repetition.</li>
+                </ol>
+                <h3>Comments</h3>
+                <p>Comments are lines of text that the computer will ignore. They are used as notes to help explain sections of code, or as reminders to users who read the code long after it's been written.</p>
+                <p>HTML comments begin with <span class="inlinecode">&lt;!--</span> and end with <span class="inlinecode">--&gt;</span>.</p>
+                <p>CSS comments begin with <span class="inlinecode">/*</span> and end with <span class="inlinecode">*/</span>.</p>
+                <h3>HTML Boxes and Positioning</h3>  
+                <p>All HTML elements are rectangular, or boxes, and each of those boxes have 4 components: the content, the padding, the border and the margin. Each of these components can be adjusted individually using CSS, and it can get confusing  when trying to determine the final size of an element. Two techniques to help with sizing issues are:</p>
+                <ol>
+                    <li>Use percents instead of pixels when sizing boxes. This will size the boxes relatively vs setting an absolute size.</li>
+                    <li>Set the <span class="inlinecode">box-sizing</span> attribute to <span class="inlinecode">border-box</span> for every element. In order to ensure this command works on all browsers, be sure to add browser specific prefixes:
+                    <pre>
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}</pre></li>
+                </ol>
+                <p>Since &lt;div&gt; tags are block elements, by default, they take up the entire width of the website. To override this behavior, use <span class="inlinecode">display: flex;</span> so that <span class="inlinecode">&lt;div&gt;</span> sections can appear next to each other.</p>
+                <h3>Coding and Testing</h3>
+                <p>To test changes in CSS, you can open Developer Tools in the browser and adjust the CSS code on the fly for each element you see on the page. These changes are temporary and are only meant to give a preview of what the change will look like. Once you are happy with the styling, you can go back to your CSS code and make the changes permanent.</p>
+            </div>
+        
+	<div class="banner-title">Lesson 4: Basic Programming Concepts</div>
+	<div class="content-wrap">
+	
+		<p>Computer science and programming is about solving problems by breaking them into smaller pieces, and then methodically, describe a sequence of steps required to solve those problems.</p>
+		
+		<p>Just as we said before that computers are stupid and will only do what you, a programmer, tells it to do, the instructions for telling a computer what to do is called a program. A program is a sequence of steps executed in a logical progression.</p>
+		
+		<p>Python is a high level language where user instructions are not executed directly by the computer. Instead, instructions are input into the Python interpreter, which then translates the user’s input into an executable that the computer understands.</p>
+		
+		<p>Writing code requires a user to understand abstract concepts, such as multiple programs working in tandem with each other. A programmer also needs to understand her goals and instructions (inputs and outputs)  in a logical and procedural manner while paying great attention to detail, since a programming language is much more precise than a natural language like English, and there is no room for ambiguity. Once the problem is understood, a programmer then creates a strategy and breaks the problem down into small pieces that can be solved concisely. These small solutions then ripple back upwards to solve the larger problem.</p>
+		
+		<h3>Comments and Expressions</h3>
+		
+		<p>A line that starts with # is considered to be a comment and will be ignored by the Python interpreter.</p>
+		
+		<p>An expression can be made up of multiple expressions and operators. Each expression can be non-terminal and be replaced by other expressions, or terminal, which cannot be replaced.</p>
+		
+		<p>Operators can be +, *, <=, >=, !=, ==. The double equal is the equality comparison, because a single = means an assignment.</p>
+		
+		<p>When comparing numbers, the output is a boolean value, either true or false.</p>
+		
+		<h3>Variables</h3>
+		
+		<p>Variables are names that keep track of known or unknown values, makes programs easier to understand.</p>
+		
+		<p>They are defined with an assignment statement: name = expression. The name needs to start with a letter or an underscore. The beauty of the variable is that it can change without having to change the entire equation.</p>
+		
+		<h3>Strings</h3>
+		
+		<p>A string is a set of characters within either matching single quotes or double quotes. The quotes are necessary because without them, Python will think the string of characters is a variable.</p>
+		
+		<p>Python does not allow concatenation of strings and variables, but allows multiplication of strings and variables.</p>
+		
+		<h3>Indexing</h3>
+		
+		<p><span class="inlinecode">&lt;string&gt;[&lt;expression&gt;]</span> – indicates the position of a character in a string. (eg. name[0])</p>
+		
+		<p>Going forward, indexing starts with 0, but going backwards, indexing starts with -1. The front of the index is inclusive, the end of the index is exclusive.</p>
+		
+		<p><span class="inlinecode">&lt;string&gt;[&lt;expression&gt;:&lt;expression&gt;]</span> – indicates indexing from start expression to (stop -1) expression.</p>
+		
+		<p>If <span class="inlinecode">&lt;expression&gt;</span> is left blank, Python will index it as either the beginning or end. (eg. name[:] would return the full string)</p>
+		
+		<h3>Find</h3>
+		
+		<p>The find() function in Python returns the index of the first position in the search string where the target string is found. If the search string is not found in the target string, find() returns -1.</p>
+		
+		<p><span class="inlinecode">target_string.find(search_string)</span></p>
+		
+		<p><span class="inlinecode">target_string.find(search_string, &lt;number&gt;)</span> returns the index of the first position in the search string where the target string is found, after the &lt;number&gt; specified, inclusively.</p>
+		</div>
+	<div class="banner-title">Lesson 5: Functions</div>
+	<div class="content-wrap">
+	
+		<p>A function is a mechanism to do an operation or series of operations so that a user does not need to write out all the operations over and over again whenever that set of operations is needed. This avoidance of repetition can also avoid typographical errors if something within the function needs to be changed.</p>
+		
+		<pre>def <function_name>(arg, arg, etc):</pre>
+		<p>Define the function using <span class="inlinecode">def &lt;name of function&gt;:</span>. Instead of using parentheses to bound the actions of the function, Python uses tab indents.</p>
+		
+		<p>A function without a return statement will have no output.</p>
+		</div>
+	<div class="banner-title">Lesson 6: If Statements and While Loops</div>
+	<div class="content-wrap">
+	
+		<h3>If statements</h3>
+		
+		<pre>
+if &lt;test expression&gt;:
+     &lt;block&gt;
+		</pre>
+		<p>If statement does not use brackets, it recognizes the end of the if block by checking indentation.</p>
+		
+		<pre>
+def is_friend(name):
+     if name[0] == D:
+        return True
+     if name[0] == N:
+        return True
+     else: 
+        return False
+		</pre>
+		<p>If you don’t add the ‘return False’, the answer comes back as ‘None’. However, you can write the procedure short hand with the ‘if’ statement implied.</p>
+		
+		<pre>
+def is_friend(name):
+     return name[0] == D or name[0] == N
+		</pre>
+		<p>will give you True or False without having to explicitly define True or False.</p>
+		
+		<h3>While Loops</h3>
+		
+		<pre>
+while &lt;test expression&gt;:
+     &lt;block>
+		</pre>
+		<p>The while block runs until the the test expression is no longer true, as compared to the if statement that only runs through once.</p>
+		</div>
+	<div class="banner-title">Lesson 7: Lists and For Loops</div>
+	<div class="content-wrap">
+	
+		<p>As previously stated, a string is a sequence of characters. A list is a sequence of anything - strings, other lists, or characters.</p>
+		
+		<p>In a string, the set of characters is surrounded by single or double quotes. In a list, the sequence of items in the list is surrounded by square brackets, with each item separated by commas. A list can be assigned to a variable. You can also access different elements of the list in the same way that you index elements in a string, using square brackets and the position of the element you’re referencing. Indexing a string returns a string. Indexing one element from a list returns the element. Indexing multiple elements from a list returns a list of those elements.</p>
+		
+		<p><span class="inlinecode">[&lt;expression&gt;,&lt;expression&gt;, etc]</span></p>
+		
+		<p>Lists can be a mix of strings, numbers and lists.</p>
+		
+		<h3>Mutation and Aliasing</h3>
+		
+		<p>Lists support mutation, where we can change the value of a list after we created it, and it subsequently changes the variables that point to it. With a string, you can change the value of a variable that is assigned to a string, but you don’t ever change the string itself.</p>
+		
+		<p>Aliasing is having 2 different ways to refer to the same element. Any change made to the object that the first variable points to also changes the value of the second variable.</p>
+		
+		<h3>Append</h3>
+		
+		<p><span class="inlinecode">&lt;list&gt;.append(&lt;element&gt;)</span> – You can append, or add, elements to a list.</p>
+		
+		<p><span class="inlinecode">len(&lt;list&gt;)</span> – gives number of items in the element. (eg. len(“Udacity”) = 7)</p>
+		
+		<p>The len function only counts the number of items in the first level. So if a list includes other lists, the inner list is counted as one item.</p>
+		
+		<h3>For Loops</h3>
+		
+		<pre>
+for &lt;name&gt; in &lt;list&gt;:
+     &lt;block&gt;
+		</pre>
+		<p><span class="inlinecode">&lt;list&gt;.index(&lt;value&gt;)</span> – gives the first position index in &lt;list&gt; where the term &lt;value&gt; is found.</p>
+		
+		<p><span class="inlinecode">&lt;value&gt; in &lt;list&gt;</span> – if &lt;value&gt; is in &lt;list&gt;, returns True. Otherwise, return False.</p>
+		
+		<p><span class="inlinecode">&lt;value&gt; not in &lt;list&gt;</span> – if &lt;value&gt; is not in &lt;list, returns True. Otherwise, return False.</p>
+        </div>
+						            
+	            <div class="banner-title footer">Copyright 2015 • ChiWei Ranck</div>
+        </main>
+    </body>
+</html>
