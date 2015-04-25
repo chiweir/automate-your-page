@@ -1,0 +1,110 @@
+
+	<div class="banner-title">Lesson 4: Basic Programming Concepts</div>
+	<div class="content-wrap">
+	
+		<p>Computer science and programming is about solving problems by breaking them into smaller pieces, and then methodically, describe a sequence of steps required to solve those problems.</p>
+		
+		<p>Just as we said before that computers are stupid and will only do what you, a programmer, tells it to do, the instructions for telling a computer what to do is called a program. A program is a sequence of steps executed in a logical progression.</p>
+		
+		<p>Python is a high level language where user instructions are not executed directly by the computer. Instead, instructions are input into the Python interpreter, which then translates the user’s input into an executable that the computer understands.</p>
+		
+		<p>Writing code requires a user to understand abstract concepts, such as multiple programs working in tandem with each other. A programmer also needs to understand her goals and instructions (inputs and outputs)  in a logical and procedural manner while paying great attention to detail, since a programming language is much more precise than a natural language like English, and there is no room for ambiguity. Once the problem is understood, a programmer then creates a strategy and breaks the problem down into small pieces that can be solved concisely. These small solutions then ripple back upwards to solve the larger problem.</p>
+		
+		<h3>Comments and Expressions</h3>
+		
+		<p>A line that starts with # is considered to be a comment and will be ignored by the Python interpreter.</p>
+		
+		<p>An expression can be made up of multiple expressions and operators. Each expression can be non-terminal and be replaced by other expressions, or terminal, which cannot be replaced.</p>
+		
+		<p>Operators can be +, *, <=, >=, !=, ==. The double equal is the equality comparison, because a single = means an assignment.</p>
+		
+		<p>When comparing numbers, the output is a boolean value, either true or false.</p>
+		
+		<h3>Variables</h3>
+		
+		<p>Variables are names that keep track of known or unknown values, makes programs easier to understand.</p>
+		
+		<p>They are defined with an assignment statement: name = expression. The name needs to start with a letter or an underscore. The beauty of the variable is that it can change without having to change the entire equation.</p>
+		
+		<h3>Strings</h3>
+		
+		<p>A string is a set of characters within either matching single quotes or double quotes. The quotes are necessary because without them, Python will think the string of characters is a variable.</p>
+		
+		<p>Python does not allow concatenation of strings and variables, but allows multiplication of strings and variables.</p>
+		
+		<h3>Indexing</h3>
+		
+		<p><span class="inlinecode">&lt;string&gt;[&lt;expression&gt;]</span> – indicates the position of a character in a string. (eg. name[0])</p>
+		
+		<p>Going forward, indexing starts with 0, but going backwards, indexing starts with -1. The front of the index is inclusive, the end of the index is exclusive.</p>
+		
+		<p><span class="inlinecode">&lt;string&gt;[&lt;expression&gt;:&lt;expression&gt;]</span> – indicates indexing from start expression to (stop -1) expression.</p>
+		
+		<p>If <span class="inlinecode">&lt;expression&gt;</span> is left blank, Python will index it as either the beginning or end. (eg. name[:] would return the full string)</p>
+		
+		<h3>Find</h3>
+		
+		<p>The find() function in Python returns the index of the first position in the search string where the target string is found. If the search string is not found in the target string, find() returns -1.</p>
+		
+		<p><span class="inlinecode">target_string.find(search_string)</span></p>
+		
+		<p><span class="inlinecode">target_string.find(search_string, &lt;number&gt;)</span> returns the index of the first position in the search string where the target string is found, after the &lt;number&gt; specified, inclusively.</p>
+		</div>
+	<div class="banner-title">Lesson 5: Functions</div>
+	<div class="content-wrap">
+	
+		<p>A function is a mechanism to do an operation or series of operations so that a user does not need to write out all the operations over and over again whenever that set of operations is needed. This avoidance of repetition can also avoid typographical errors if something within the function needs to be changed.</p>
+		
+		<pre>def <function_name>(arg, arg, etc):</pre>
+		<p>Define the function using <span class="inlinecode">def &lt;name of function&gt;:</span>. Instead of using parentheses to bound the actions of the function, Python uses tab indents.</p>
+		
+		<p>A function without a return statement will have no output.</p>
+		</div>
+	<div class="banner-title">Lesson 6: If Statements and While Loops</div>
+	<div class="content-wrap">
+	
+		<h3>If statements</h3>
+		
+		<p>If statement does not use brackets, it recognizes the end of the if block by checking indentation.</p>
+		
+		<p>If you don’t add the ‘return False’, the answer comes back as ‘None’. However, you can write the procedure short hand with the ‘if’ statement implied.</p>
+		
+		<p>will give you True or False without having to explicitly define True or False.</p>
+		
+		<h3>While Loops</h3>
+		
+		<p>The while block runs until the the test expression is no longer true, as compared to the if statement that only runs through once.</p>
+		</div>
+	<div class="banner-title">Lesson 7: Lists and For Loops</div>
+	<div class="content-wrap">
+	
+		<p>As previously stated, a string is a sequence of characters. A list is a sequence of anything - strings, other lists, or characters.</p>
+		
+		<p>In a string, the set of characters is surrounded by single or double quotes. In a list, the sequence of items in the list is surrounded by square brackets, with each item separated by commas. A list can be assigned to a variable. You can also access different elements of the list in the same way that you index elements in a string, using square brackets and the position of the element you’re referencing. Indexing a string returns a string. Indexing one element from a list returns the element. Indexing multiple elements from a list returns a list of those elements.</p>
+		
+		<p><span class="inlinecode">[&lt;expression&gt;,&lt;expression&gt;, etc]</span></p>
+		
+		<p>Lists can be a mix of strings, numbers and lists.</p>
+		
+		<h3>Mutation and Aliasing</h3>
+		
+		<p>Lists support mutation, where we can change the value of a list after we created it, and it subsequently changes the variables that point to it. With a string, you can change the value of a variable that is assigned to a string, but you don’t ever change the string itself.</p>
+		
+		<p>Aliasing is having 2 different ways to refer to the same element. Any change made to the object that the first variable points to also changes the value of the second variable.</p>
+		
+		<h3>Append</h3>
+		
+		<p><span class="inlinecode">&lt;list&gt;.append(&lt;element&gt;)</span> – You can append, or add, elements to a list.</p>
+		
+		<p><span class="inlinecode">len(&lt;list&gt;)</span> – gives number of items in the element. (eg. len(“Udacity”) = 7)</p>
+		
+		<p>The len function only counts the number of items in the first level. So if a list includes other lists, the inner list is counted as one item.</p>
+		
+		<h3>For Loops</h3>
+		
+		<p><span class="inlinecode">&lt;list&gt;.index(&lt;value&gt;)</span> – gives the first position index in &lt;list&gt; where the term &lt;value&gt; is found.</p>
+		
+		<p><span class="inlinecode">&lt;value&gt; in &lt;list&gt;</span> – if &lt;value&gt; is in &lt;list&gt;, returns True. Otherwise, return False.</p>
+		
+		<p><span class="inlinecode">&lt;value&gt; not in &lt;list&gt;</span> – if &lt;value&gt; is not in &lt;list, returns True. Otherwise, return False.</p>
+		</div>
